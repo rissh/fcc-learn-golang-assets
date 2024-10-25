@@ -6,6 +6,13 @@ import (
 
 func maxMessages(thresh float64) int {
 	// ?
+	total := 0.0
+	for i := 0; ; i++ {
+		total += 1.0 + (0.01 * float64(i))
+		if total > thresh {
+			return i
+		}
+	}
 }
 
 // don't edit below this line
